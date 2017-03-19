@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>RNAcentral interview 8/Sep/2016</title>
+
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/smoothness/jquery-ui.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sky.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+        <style type="text/css" media="screen">
+            iframe {
+                width:100%;
+                height:100%;
+            }
+        </style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h1 id="eduardo_sanz">Eduardo Sanz</h1>
+                    <h3>PDBe</h3>
+                    <p>Scientific programmer for the EMDB</p>
+                </section>
+                <section>
+                    <h2>Summary</h2>
+                    <ul>
+                        <li class="fragment">EMDB entry pages</li>
+                        <li class="fragment">PDBe API</li>
+                    </ul>
+                </section>
+                <section>
+                    <section>
+                        <h2>Design principles</h2>
+                        <ul>
+                            <li class="fragment">Mobile first</li>
+                            <li class="fragment">Responsiveness</li>
+                            <li class="fragment">Based on RESTful API</li>
+                            <li class="fragment">Fully compliant with EBI guidelines, iconography and typography</li>
+                        </ul>
+                        <aside class="notes">
+                            <ul>
+                                <li>Vision based on user research</li>
+                                <li>Personas</li>
+                                <li>Designing/mocking/test/refine cycle</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>EBI design guidelines</h2>
+                        <ul>
+                            <li>24 grid layout</li>
+                            <li>Responsiveness</li>
+                            <li>Based on RESTful API</li>
+                            <li>EBI guideline and iconography</li>
+                        </ul>
+
+                    <div class="framewrap">
+                        <iframe data-src="http://www.ebi.ac.uk/web_guidelines/fonts/" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                        <aside class="notes">
+                            <ul>
+                                <li>Fluid width adapting to the viewport</li>
+                                <li>Hiding and shown different elements depending on devices</li>
+                            </ul>
+                        </aside>
+                    </section>
+                </section>
+                <section>
+                    <h2>EMDB entry pages</h2>
+                    <div class="framewrap">
+                        <iframe data-src="http://www.ebi.ac.uk/pdbe/entry/emdb/EMD-4068" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <aside class="notes">
+                        <ul>
+                            <li>Global EBI menu</li>
+                            <li>Group local menu</li>
+                            <li>Navigation menu</li>
+                            <li>Breadcrumg tail</li>
+                            <li>Global footer</li>
+                        </ul>
+                    </aside>
+                </section>
+                <section>
+                    <h2 id="api_based">PDBe API</h2>
+                    <ul>
+                        <li class="fragment">High performance while minimalistic (Python/Bottle)</li>
+                        <li class="fragment">Variety of backend sources</li>
+                        <ul class="fragment">
+                            <li>MySQL</li>
+                            <li>Oracle</li>
+                            <li>Flat files</li>
+                        </ul>
+                        <li class="fragment">Memcache</li>
+                        <li class="fragment">No authoriztion/throttling</li>
+                        <li class="fragment">Results in JSON format</li>
+                        <li class="fragment">Unversioned, new releases are backward compatible, and additive</li>
+                        <li class="fragment">Benchmarked (Apache ab) and regularly tested</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2 id="api_based">PDBe API</h2>
+                    <div class="framewrap">
+                        <iframe data-src="http://www.ebi.ac.uk/pdbe/api/doc/emdb.html" style="height:500px;" allowfullscreen></iframe>
+                    </div>
+                </section>
+                <section>
+                    <section>
+                        <h2>Other projects</h2>
+                    </section>
+                    <section>
+                        <h2>OneDep: annotation and deposition services</h2>
+                        <!--ul>
+                            <li>Python/Django</li>
+                            <li>JQuery</li>
+                        </ul-->
+                        <div class="framewrap">
+                            <iframe data-src="https://deposit-pdbe.wwpdb.org/deposition" style="height:500px;" allowfullscreen></iframe>
+                            <!--iframe data-src="https://deposit-pdbe.wwpdb.org/deposition" style="height:500px;" allowfullscreen onload="this.style.height = this.contentWindow.document.body.scrollHeight + 'px'"></iframe-->
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Validation pipeline and reports</h2>
+                        <!--ul>
+                            <li>Python</li>
+                            <li>JQuery</li>
+                        </ul-->
+                        <a href="assets/1gr5_full.pdf" target="_blank">Example here</a>
+                        <!--iframe data-src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe-->
+                    </section>
+                </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+                center: true,
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+        <script type="text/javascript" charset="utf-8">
+            $(function () {
+                $(".framewrap")
+                    .draggable()
+                    .resizable();
+        });
+        </script>
+	</body>
+</html>
