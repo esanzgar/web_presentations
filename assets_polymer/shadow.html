@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title></title>
+
+    </head>
+    <body>
+        <div id="mydiv">
+            place in this div#mydiv
+            <p>Options:</p>
+            <ul>
+                <li><code>
+                        /* older browser var shadowroot = mydiv.createShadowRoot();*/<br>
+                        shadowroot = mydiv.attachShadow();<br>
+                        shadowroot.innerHTML = "Because I'm Batman!";<br>
+                </code></li>
+            </ul>
+        </div>
+        <template id="mytemplate">
+            <div>
+                <img src="http://placehold.it/350" alt="My image"/>
+            </div>
+        </template>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    </body>
+</html>
